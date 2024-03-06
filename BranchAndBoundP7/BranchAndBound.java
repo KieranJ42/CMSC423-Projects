@@ -6,7 +6,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class BranchAndBound {
@@ -14,7 +13,7 @@ public class BranchAndBound {
 	public static void sequence(File input) throws IOException {
 		Scanner scan = new Scanner(input);
 		//FileWriter writer = new FileWriter("output"); //use for submission
-		FileWriter writer = new FileWriter("C:\\Users\\kgj\\eclipse-workspace-school\\CMSC423\\src\\BranchAndBoundP7\\output");
+		FileWriter writer = new FileWriter("/Users/kieranjohnston/Desktop/Programming Projects/CMSC423-Projects/BranchAndBoundP7/output");
 		String word = "";
 		while (scan.hasNextLine()) {
 			word+=scan.nextLine();
@@ -87,7 +86,7 @@ public class BranchAndBound {
 				total+=branches.get(i).get(j)+"-";
 			}
 			total = total.substring(0,total.length()-1);
-			total += " ";
+			total += "\n";
 		}
 		if (!total.equals(""))
 			total = total.substring(0, total.length()-1);
@@ -155,7 +154,7 @@ public class BranchAndBound {
 	
 	public static void main(String[] args) {
 		//File input = new File("input"); //use for submission
-		File input = new File("C:\\Users\\kgj\\eclipse-workspace-school\\CMSC423\\src\\BranchAndBoundP7\\TestInput");
+		File input = new File("/Users/kieranjohnston/Desktop/Programming Projects/CMSC423-Projects/BranchAndBoundP7/TestInput");
 		//System.out.println("Hi");
 		try {
 			sequence(input);
